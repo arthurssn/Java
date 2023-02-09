@@ -18,10 +18,7 @@ public class Program {
         System.out.print("Price: ");
         double price = scanner.nextDouble();
 
-        System.out.print("Quantity: ");
-        int quantity = scanner.nextInt();
-
-        Product product = new Product(name, price, quantity);
+        Product product = new Product(name, price);
 
         double totalValueInStock = product.totalValueInStock();
 
