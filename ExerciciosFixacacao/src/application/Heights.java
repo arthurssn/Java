@@ -25,7 +25,7 @@ public class Heights {
             double height = scanner.nextDouble();
             totalHeight += height;
             people[i] = new Person(name, age, height);
-            if (age > 16) {
+            if (age < 16) {
                 peopleUnder16YearsOld++;
             }
         }
@@ -34,7 +34,7 @@ public class Heights {
 
         double percentageOfPeopleUnder16 = (100 * peopleUnder16YearsOld) / (double) amountOfPeople;
 
-        System.out.printf("Pessoas com menos de 16 anos: %.2f \n", percentageOfPeopleUnder16);
+        System.out.printf("Pessoas com menos de 16 anos: %.2f%% \n", percentageOfPeopleUnder16);
         for (Person person : people) {
             if (person.getAge() < 16) {
                 System.out.println(person.getName());
